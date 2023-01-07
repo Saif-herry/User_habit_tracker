@@ -22,7 +22,7 @@ userController.post("/register",(req,res)=>{
         console.log(user);
         res.send("signup successfull");
         
-        // Store hash in your password DB.
+        // Store hash in your password DB
     });
 })
 

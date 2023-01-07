@@ -1,5 +1,5 @@
 const express = require("express");
-const HabitModal = require("../models/Habits.model");
+const HabitModal = require("../models/Habit.model");
 
 
 
