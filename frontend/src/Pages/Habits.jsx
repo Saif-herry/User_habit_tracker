@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 
+
 export const Habits = () => {
   const [data, setData] = useState([]);
   const [text, setText] = useState("");
@@ -37,6 +38,7 @@ export const Habits = () => {
   }, []);
   return (
     <div>
+    
         <div className={styles.Noticeboard}>
         <h1> Notice Board</h1>
         <textarea
