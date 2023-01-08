@@ -15,7 +15,7 @@ export const Signup = () => {
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  fetch('http://localhost:7000/user/register',{
+  fetch('https://wild-rugby-shirt-fish.cyclic.app/user/register',{
     method:'post',
     body:JSON.stringify(inpval),
     headers:{

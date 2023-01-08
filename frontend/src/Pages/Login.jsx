@@ -16,17 +16,12 @@ export const Login = () => {
   const handleChange = (e) => {
     setInpVal({ ...inpVal, [e.target.name]: e.target.value });
   };
-   
-
-  // async function LoginPost(){
-   
-  // }
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     // console.log(inpVal)
-    await fetch("http://localhost:7000/user/login", {
+    await fetch("https://wild-rugby-shirt-fish.cyclic.app/user/login", {
       method: "POST",
       body: JSON.stringify(inpVal),
       headers: {
@@ -36,22 +31,23 @@ export const Login = () => {
       .then((r) => r.json())
       .then((res) => {
        
-          console.log("login", res.token);
+          console.log("login", res);
+          localStorage.setItem('userId',JSON.stringify(res.message));
           dispatch({
             type: "LOGIN_SUCCESS",
             payload: res.token,
           })
           if (res.token) {
             alert("LOGIN DONE");
-            navigate("/");
+            navigate("/habit");
         }
       }).catch(er=>console.log(er))
     
   };
 
-  // if (state.isAuth) {
-  //   return <Navigate to="/" />;
-  // }
+  if (state.isAuth) {
+    return <Navigate to="/" />;
+  }
   return (
     <div>
     <div className={styles.loginWrapper}>

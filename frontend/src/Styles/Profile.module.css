@@ -1,0 +1,11 @@
+.main{
+    width:50%;
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin:40px auto;
+    box-shadow: rgba(250, 5, 5, 0.863) 0px 5px 15px;
+}
